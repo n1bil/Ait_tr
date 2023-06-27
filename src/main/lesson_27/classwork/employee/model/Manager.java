@@ -1,4 +1,4 @@
-package main.lesson_25.classwork.abstract_class_method.employee.model;
+package main.lesson_27.classwork.employee.model;
 
 public class Manager extends Employee {
 

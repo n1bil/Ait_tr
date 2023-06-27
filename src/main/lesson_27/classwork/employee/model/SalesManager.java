@@ -1,4 +1,4 @@
-package main.lesson_25.classwork.abstract_class_method.employee.model;
+package main.lesson_27.classwork.employee.model;
 
 public class SalesManager extends Employee {
 
@@ -10,6 +10,8 @@ public class SalesManager extends Employee {
         this.salesValue = salesValue;
         this.percent = percent;
     }
+
+
 
     public double getSalesValue() {
         return salesValue;

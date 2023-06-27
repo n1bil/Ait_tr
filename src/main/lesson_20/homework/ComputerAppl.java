@@ -1,9 +1,9 @@
-package main.lesson_20.homework2;
+package main.lesson_20.homework;
 
-import main.lesson_20.homework2.computer.model.Computer;
-import main.lesson_20.homework2.computer.model.Laptop;
-import main.lesson_20.homework2.computer.dao.ComputerHardwareStore;
-import main.lesson_20.homework2.computer.model.Smartphone;
+import main.lesson_20.homework.computer.model.Computer;
+import main.lesson_20.homework.computer.model.Laptop;
+import main.lesson_20.homework.computer.dao.ComputerHardwareStore;
+import main.lesson_20.homework.computer.model.Smartphone;
 
 public class ComputerAppl {
     public static void main(String[] args) {

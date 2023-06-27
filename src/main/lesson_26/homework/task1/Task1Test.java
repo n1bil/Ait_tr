@@ -1,4 +1,4 @@
-package main.lesson_26.homework;
+package main.lesson_26.homework.task1;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -33,5 +33,4 @@ class Task1Test {
         int[] array = {-2, -4, 3, 8, -5, -2, -4, 7, 2, 8};
         assertTrue(task.checkDuplicate(array), "Array must be true");
     }
-
 }

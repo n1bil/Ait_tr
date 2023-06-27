@@ -1,21 +1,24 @@
-package main.lesson_25.classwork.abstract_class_method.employee;
+package main.lesson_27.classwork.employee;
 
-import main.lesson_25.classwork.abstract_class_method.employee.model.Employee;
-import main.lesson_25.classwork.abstract_class_method.employee.model.Manager;
-import main.lesson_25.classwork.abstract_class_method.employee.model.SalesManager;
-import main.lesson_25.classwork.abstract_class_method.employee.model.WageEmployee;
+import main.lesson_27.classwork.employee.model.Employee;
+import main.lesson_27.classwork.employee.model.Manager;
+import main.lesson_27.classwork.employee.model.SalesManager;
+import main.lesson_27.classwork.employee.model.WageEmployee;
 
 public class EmployeeAppl {
     public static void main(String[] args) {
-        Employee[] firms = new Employee[6];
-        firms[0] = new Manager(1000, "John", "Smith", 160, 5000, 5);
-        firms[1] = new WageEmployee(2000, "Ann", "Smith", 160, 15);
-        firms[2] = new SalesManager(3000, "Peter", "Jackson", 160, 25000, 0.1);
-        firms[3] = new SalesManager(4000, "Rabindranat", "Anand", 80, 20000, 0.1);
-//        firms[4] = new Employee(5000, "John", "Idiot", 160);
 
-        printArray(firms);
-        double total = totalSalary(firms);
+
+        Employee[] employee = new Employee[6];
+        employee[0] = new Manager(1000, "John", "Smith", 160, 5000, 5);
+        employee[1] = new WageEmployee(2000, "Ann", "Smith", 160, 15);
+        employee[2] = new SalesManager(3000, "Peter", "Jackson", 160, 25000, 0.1);
+        employee[3] = new SalesManager(4000, "Rabindranat", "Anand", 80, 20000, 0.1);
+
+//        employee[4] = new Employee(5000, "John", "Idiot", 160);
+
+        printArray(employee);
+        double total = totalSalary(employee);
         System.out.println("Total salary = " + total);
     }
 

@@ -13,4 +13,6 @@ public class MeatFood extends Food {
     public String toString() {
         return super.toString() + " meatType='" + meatType + '\'';
     }
+
+
 }

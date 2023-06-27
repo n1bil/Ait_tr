@@ -1,6 +1,6 @@
-package main.lesson_27.classwork.employee.dao;
+package main.lesson_28.classwork.employee.dao;
 
-import main.lesson_27.classwork.employee.model.Employee;
+import main.lesson_28.classwork.employee.model.Employee;
 
 public interface Company {
 
@@ -19,4 +19,8 @@ public interface Company {
     double totalSales();
 
     void printEmployees();
+
+    Employee[] findEmployeesHoursGreaterThan(int hours);
+
+    Employee[] findEmployeesSalaryRange(int minSalary, int maxSalary);
 }

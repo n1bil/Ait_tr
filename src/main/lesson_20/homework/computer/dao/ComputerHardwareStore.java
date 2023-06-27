@@ -1,6 +1,6 @@
-package main.lesson_20.homework2.computer.dao;
+package main.lesson_20.homework.computer.dao;
 
-import main.lesson_20.homework2.computer.model.Computer;
+import main.lesson_20.homework.computer.model.Computer;
 
 public class ComputerHardwareStore {
     private Computer[] computers;

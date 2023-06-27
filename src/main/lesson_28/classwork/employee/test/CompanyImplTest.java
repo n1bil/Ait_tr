@@ -1,11 +1,11 @@
-package main.lesson_27.classwork.employee.test;
+package main.lesson_28.classwork.employee.test;
 
-import main.lesson_27.classwork.employee.dao.Company;
-import main.lesson_27.classwork.employee.dao.CompanyImpl;
-import main.lesson_27.classwork.employee.model.Employee;
-import main.lesson_27.classwork.employee.model.Manager;
-import main.lesson_27.classwork.employee.model.SalesManager;
-import main.lesson_27.classwork.employee.model.WageEmployee;
+import main.lesson_28.classwork.employee.dao.Company;
+import main.lesson_28.classwork.employee.dao.CompanyImpl;
+import main.lesson_28.classwork.employee.model.Employee;
+import main.lesson_28.classwork.employee.model.Manager;
+import main.lesson_28.classwork.employee.model.SalesManager;
+import main.lesson_28.classwork.employee.model.WageEmployee;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -65,7 +65,7 @@ class CompanyImplTest {
 
     @Test
     void avgSalary() {
-        assertEquals(12700 / 4, company.avgSalary(), 0.01);
+        assertEquals(12700. / 4, company.avgSalary(), 0.01);
     }
 
     @Test
@@ -77,4 +77,37 @@ class CompanyImplTest {
     void printEmployees() {
         company.printEmployees();
     }
+
+    @Test
+    void findEmployeesHoursGreaterThan() {
+        Employee[] actual = company.findEmployeesHoursGreaterThan(100);
+        Employee[] expected = {firm[0], firm[1], firm[2]};
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    void findEmployeesSalaryRange() {
+        Employee[] actual = company.findEmployeesSalaryRange(2000, 2500);
+        Employee[] expected = {firm[1], firm[3]};
+        assertArrayEquals(actual, expected);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-package main.lesson_27.classwork.employee.model;
+package main.lesson_28.classwork.employee.model;
 
 import java.util.Objects;
 

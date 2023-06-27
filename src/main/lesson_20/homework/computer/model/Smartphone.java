@@ -1,4 +1,4 @@
-package main.lesson_20.homework2.computer.model;
+package main.lesson_20.homework.computer.model;
 
 public class Smartphone extends Laptop {
 

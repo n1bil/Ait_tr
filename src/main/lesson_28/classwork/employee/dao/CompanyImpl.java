@@ -1,7 +1,7 @@
-package main.lesson_27.classwork.employee.dao;
+package main.lesson_28.classwork.employee.dao;
 
-import main.lesson_27.classwork.employee.model.Employee;
-import main.lesson_27.classwork.employee.model.SalesManager;
+import main.lesson_28.classwork.employee.model.Employee;
+import main.lesson_28.classwork.employee.model.SalesManager;
 
 public class CompanyImpl implements Company {
 
@@ -14,32 +14,33 @@ public class CompanyImpl implements Company {
 
     @Override
     public boolean addEmployee(Employee employee) {
-        if (employee == null) {
-            return false;
-        }
-        for (int i = 0; i < size; i++) {
-            if (employees[i] != null && employees[i].getId() == employee.getId()) {
-                return false;
-            }
-        }
-        if (size < employees.length) {
+//        if (employee == null || size == employees.length || findEmployee(employee.getId()) != null) {
+//            return false;
+//        }
+////        employees[size] = employee;
+////        size++;
+//        employees[size++] = employee;
+//        return true;
+
+        if (employee != null && size != employees.length && findEmployee(employee.getId()) == null) {
             employees[size] = employee;
             size++;
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
     @Override
     public Employee removeEmployee(int id) {
         for (int i = 0; i < size; i++) {
             if (employees[i].getId() == id) {
-                Employee removedEmployee = employees[i];
-                employees[i] = employees[size - 1]; // Заменяем удаленного сотрудника последним сотрудником в массиве
-                employees[size - 1] = null; // Обнуляем ссылку на последнего сотрудника
-                size--;
-                return removedEmployee;
+                Employee temp = employees[i];
+//                employees[i] = employees[size - 1];
+//                employees[size - 1] = null;
+//                size--;
+                employees[i] = employees[--size];
+                employees[size] = null;
+                return temp;
             }
         }
         return null;
@@ -63,17 +64,15 @@ public class CompanyImpl implements Company {
     @Override
     public double totalSalary() {
         double sum = 0;
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i] != null) {
-                sum += employees[i].calcSalary();
-            }
+        for (int i = 0; i < size; i++) {
+            sum += employees[i].calcSalary();
         }
         return sum;
     }
 
     @Override
     public double avgSalary() {
-        return totalSalary() / 4;
+        return totalSalary() / size;
     }
 
     @Override
@@ -93,5 +92,39 @@ public class CompanyImpl implements Company {
         for (int i = 0; i < size; i++) {
             System.out.println(employees[i]);
         }
+    }
+
+    @Override
+    public Employee[] findEmployeesHoursGreaterThan(int hours) {
+        int countEmployees = 0;
+        for (int i = 0; i < size; i++) {
+            if (employees[i].getHours() > hours) {      // считать сколько
+                countEmployees++;
+            }
+        }
+        Employee[] result = new Employee[countEmployees];
+        for (int i = 0, j = 0; j < result.length; i++) {    // заполнять
+            if (employees[i].getHours() > hours) {
+                result[j++] = employees[i];
+            }
+        }
+        return result;
+    }
+
+    @Override
+    public Employee[] findEmployeesSalaryRange(int minSalary, int maxSalary) {
+        int countEmployees = 0;
+        for (int i = 0; i < size; i++) {
+            if (employees[i].calcSalary() >= minSalary && employees[i].calcSalary() < maxSalary) {
+                countEmployees++;
+            }
+        }
+        Employee[] result = new Employee[countEmployees];
+        for (int i = 0, j = 0; j < result.length; i++) {
+            if (employees[i].calcSalary() >= minSalary && employees[i].calcSalary() < maxSalary) {
+                result[j++] = employees[i];
+            }
+        }
+        return result;
     }
 }
