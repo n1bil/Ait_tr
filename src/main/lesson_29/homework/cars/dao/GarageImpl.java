@@ -1,6 +1,8 @@
-package main.lesson_28.homework.cars.dao;
+package main.lesson_29.homework.cars.dao;
 
-import main.lesson_28.homework.cars.model.Car;
+import main.lesson_29.homework.cars.model.Car;
+
+import java.util.function.Predicate;
 
 public class GarageImpl implements Garage {
 
@@ -48,73 +50,35 @@ public class GarageImpl implements Garage {
 
     @Override
     public Car[] findCarsByModel(String model) {
-        int count = 0;
-        for (int i = 0; i < size; i++) {
-            if (cars[i].getModel().equals(model)) {
-                count++;
-            }
-        }
-        Car[] foundCars = new Car[count];
-        int index = 0;
-        for (int i = 0; index < foundCars.length; i++) {
-            if (cars[i].getModel().equals(model)) {
-                foundCars[index] = cars[i];
-                index++;
-            }
-        }
-        return foundCars;
+        return findCarsByPredicate(car -> car.getModel().equals(model));
     }
 
     @Override
     public Car[] findCarsByCompany(String company) {
-        int count = 0;
-        for (int i = 0; i < size; i++) {
-            if (cars[i].getCompany().equals(company)) {
-                count++;
-            }
-        }
-        Car[] foundCars = new Car[count];
-        int index = 0;
-        for (int i = 0; index < foundCars.length; i++) {
-            if (cars[i].getCompany().equals(company)) {
-                foundCars[index] = cars[i];
-                index++;
-            }
-        }
-        return foundCars;
+        return findCarsByPredicate(car -> car.getCompany().equals(company));
     }
 
     @Override
     public Car[] findCarsByEngine(double min, double max) {
-        int count = 0;
-        for (int i = 0; i < size; i++) {
-            if (cars[i].getEngine() >= 1.6 && cars[i].getEngine() <= 1.8) {
-                count++;
-            }
-        }
-        Car[] foundCars = new Car[count];
-        int index = 0;
-        for (int i = 0; i < foundCars.length; i++) {
-            if (cars[i].getEngine() >= 1.6 && cars[i].getEngine() <= 1.8) {
-                foundCars[index] = cars[i];
-                index++;
-            }
-        }
-        return foundCars;
+        return findCarsByPredicate(car -> car.getEngine() >= min && car.getEngine() <= max);
     }
 
     @Override
     public Car[] findCarsByColor(String color) {
+        return findCarsByPredicate(car -> car.getColor().equals(color));
+    }
+
+    private Car[] findCarsByPredicate(Predicate<Car> carPredicate) {
         int count = 0;
         for (int i = 0; i < size; i++) {
-            if (cars[i].getColor().equals(color)) {
+            if (carPredicate.test(cars[i])) {
                 count++;
             }
         }
         Car[] foundCars = new Car[count];
         int index = 0;
         for (int i = 0; index < foundCars.length; i++) {
-            if (cars[i].getColor().equals(color)) {
+            if (carPredicate.test(cars[i])) {
                 foundCars[index] = cars[i];
                 index++;
             }

@@ -1,4 +1,4 @@
-package main.lesson4;
+package main.lesson_04;
 
 public class ChoiceAppl {
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class ChoiceAppl {
 //        res = max(8.2, 8.1);
 //        System.out.println("Max = " + res);
 //        res = abs(5);
-//        System.out.println("abs = " + res);
+//        System.out.println("abs = "C + res);
 //        res = abs(-7);
 //        System.out.println("abs = " + res);
 //        res = abs(0);

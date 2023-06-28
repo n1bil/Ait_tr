@@ -1,7 +1,5 @@
 package main.lesson_10.classwork;
 
-import java.util.Random;
-
 public class ArrayAdvanced {
     public static void main(String[] args) {
         int[] arr = new int[10];
