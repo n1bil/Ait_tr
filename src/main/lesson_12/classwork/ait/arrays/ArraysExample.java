@@ -6,10 +6,10 @@ public class ArraysExample {
     public static void main(String[] args) {
         int[] arr = new int[10];
         ArraysTools.fillArray(arr, 10, 99);
-        ArraysTools.printArray(arr);
+//        ArraysTools.printArray(arr);
 //        ArraysTools.bubbling(arr);
         ArraysTools.bubbleSort2(arr);
-        ArraysTools.printArray(arr);
+//        ArraysTools.printArray(arr);
         int index = ArraysTools.binarySearch(arr, 42);
         System.out.println("Index = " + index);
     }
