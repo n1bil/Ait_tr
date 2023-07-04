@@ -13,18 +13,18 @@ public class DateSortTest {
     Comparator<String> dataComparator;
 
     @BeforeEach
-    void setUp() {
-        dataComparator = (s1, s2) -> {
-            String[] strings1 = s1.split("-");
-            String[] strings2 = s2.split("-");
+    void setUp() {                                                  // пример сравнений:
+        dataComparator = (s1, s2) -> {                              // strings1[0] и strings2[0] - год
+            String[] strings1 = s1.split("-");                // strings1[1] и strings2[1] - месяц
+            String[] strings2 = s2.split("-");                // strings1[2] и strings2[2] - день
 
-            for (int i = strings1.length - 1; i >= 0; i--) {
-                int result = strings1[i].compareTo(strings2[i]);
-                if (result != 0) {
-                    return result;
+            for (int i = strings1.length - 1; i >= 0; i--) {        // начинаем сравнивать с конца, то есть с года
+                int result = strings1[i].compareTo(strings2[i]);    // если год одинаково, то потом месяц и потом день если тоже одинаково
+                if (result != 0) {                                  // если не равных
+                    return result;                                  // то вернуть результат
                 }
             }
-            return 0;
+            return 0;                                               // если всё одинаково
         };
     }
 
@@ -38,7 +38,6 @@ public class DateSortTest {
                 "16-06-1970"
         };
         Arrays.sort(dates, dataComparator);
-        System.out.println(Arrays.toString(dates));
         String[] expected = {
                 "16-06-1970",
                 "07-05-1990",
