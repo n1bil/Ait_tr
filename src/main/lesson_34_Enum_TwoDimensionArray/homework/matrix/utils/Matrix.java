@@ -26,7 +26,6 @@ public class Matrix {
     }
 
     public static int[][] multiply(int[][] matrix1, int[][] matrix2) {
-        //TODO
         int[][] multiplication = new int[matrix1.length][matrix2[0].length];
 
         for (int i = 0; i < matrix1.length; i++) {
