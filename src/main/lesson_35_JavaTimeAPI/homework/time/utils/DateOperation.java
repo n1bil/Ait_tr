@@ -19,7 +19,6 @@ public class DateOperation {
     }
 
     public static String[] sortStringDates(String[] dates) {
-        //TODO
         DateTimeFormatter df = DateTimeFormatter.ofPattern("[yyyy-MM-dd][dd/MM/yyyy]");
 
         Comparator<String> comparator = (s1, s2) -> {
