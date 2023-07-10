@@ -19,15 +19,15 @@ class AlbumImplTest {
 
     @BeforeEach
     void setUp() {
-        this.album = new AlbumImpl(5);
-        this.photos = new Photo[]{
+        album = new AlbumImpl(5);
+        photos = new Photo[]{
                 new Photo(1, 1, "title1", "url1", LocalDateTime.of(2023, 12, 3, 4, 2)),
                 new Photo(1, 2, "title2", "url2", LocalDateTime.of(2021, 6, 22, 3, 33)),
                 new Photo(1, 3, "title3", "url3", LocalDateTime.of(2022, 3, 12, 12, 12)),
                 new Photo(2, 1, "title4", "url4", LocalDateTime.of(2022, 9, 3, 2, 44))};
 
         for(int i = 0; i < photos.length; ++i) {
-            this.album.addPhoto(photos[i]);
+            album.addPhoto(photos[i]);
         }
 
     }
