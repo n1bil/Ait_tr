@@ -1,4 +1,4 @@
-package main.lesson_36.classwork.album.model;
+package main.lesson_36.classworkAndHomework.album.model;
 
 import java.time.LocalDateTime;
 import java.util.Objects;

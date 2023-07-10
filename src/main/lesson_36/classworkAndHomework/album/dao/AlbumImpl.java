@@ -1,6 +1,6 @@
-package main.lesson_36.classwork.album.dao;
+package main.lesson_36.classworkAndHomework.album.dao;
 
-import main.lesson_36.classwork.album.model.Photo;
+import main.lesson_36.classworkAndHomework.album.model.Photo;
 
 import java.time.LocalDate;
 import java.util.function.Predicate;

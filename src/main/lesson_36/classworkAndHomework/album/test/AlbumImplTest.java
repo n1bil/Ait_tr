@@ -1,8 +1,8 @@
-package main.lesson_36.classwork.album.test;
+package main.lesson_36.classworkAndHomework.album.test;
 
-import main.lesson_36.classwork.album.dao.Album;
-import main.lesson_36.classwork.album.dao.AlbumImpl;
-import main.lesson_36.classwork.album.model.Photo;
+import main.lesson_36.classworkAndHomework.album.dao.Album;
+import main.lesson_36.classworkAndHomework.album.dao.AlbumImpl;
+import main.lesson_36.classworkAndHomework.album.model.Photo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
