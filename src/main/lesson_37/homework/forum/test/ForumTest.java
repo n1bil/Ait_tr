@@ -21,11 +21,11 @@ class ForumTest {
     void setUp() {
         forum = new ForumImpl();
         posts = new Post[]{
-                new Post(1, "Sport", "Andrew", "Football", LocalDateTime.of(2023, 6, 3, 4, 44)),
-                new Post(2, "Politics", "Daniel", "War", LocalDateTime.of(2023, 3, 5, 5, 55)),
-                new Post(3, "Traveling", "Randy", "New Zealand", LocalDateTime.of(2023, 5, 4, 21, 12)),
-                new Post(4, "Sport", "Daniel", "Hockey", LocalDateTime.of(2023, 10, 10, 10, 32)),
-                new Post(5, "Traveling", "Daniel", "Greece", LocalDateTime.of(2023, 11, 6, 7, 1))
+                new Post(1, "Sport", "Andrew", "Football"),
+                new Post(2, "Politics", "Daniel", "War"),
+                new Post(3, "Traveling", "Randy", "New Zealand"),
+                new Post(4, "Sport", "Daniel", "Hockey"),
+                new Post(5, "Traveling", "Daniel", "Greece")
         };
         for (int i = 0; i < posts.length; i++) {
             forum.addPost(posts[i]);
@@ -36,9 +36,9 @@ class ForumTest {
     void addPost() {
         assertFalse(forum.addPost(null));
         assertFalse(forum.addPost(posts[2]));
-        assertTrue(forum.addPost(new Post(6, "Fashion", "Tommy", "New clothes", LocalDateTime.of(2023, 6, 25, 2, 2))));
+        assertTrue(forum.addPost(new Post(6, "Fashion", "Tommy", "New clothes")));
         assertEquals(6, forum.size());
-        assertTrue(forum.addPost(new Post(7, "Traveling", "Wayne", "Jamaica", LocalDateTime.of(2023, 8, 1, 5, 6))));
+        assertTrue(forum.addPost(new Post(7, "Traveling", "Wayne", "Jamaica")));
     }
 
     @Test

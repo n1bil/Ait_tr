@@ -11,12 +11,12 @@ public class Post{
     private LocalDateTime localDateTime;
     private int likes;
 
-    public Post(int postId, String title, String author, String content, LocalDateTime localDateTime) {
+    public Post(int postId, String title, String author, String content) {
         this.postId = postId;
         this.title = title;
         this.author = author;
         this.content = content;
-        this.localDateTime = localDateTime;
+        this.localDateTime = LocalDateTime.now();
     }
 
     public int getPostId() {
