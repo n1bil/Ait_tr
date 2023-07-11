@@ -1,4 +1,4 @@
-package main.lesson_38_Exception.classwork.forum.model;
+package main.lesson_38_Exception.classworkAndHomework.forum.model;
 
 import java.time.LocalDateTime;
 

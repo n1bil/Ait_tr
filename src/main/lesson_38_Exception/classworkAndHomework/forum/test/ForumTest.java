@@ -1,8 +1,8 @@
-package main.lesson_38_Exception.classwork.forum.test;
+package main.lesson_38_Exception.classworkAndHomework.forum.test;
 
-import main.lesson_38_Exception.classwork.forum.dao.Forum;
-import main.lesson_38_Exception.classwork.forum.dao.ForumImpl;
-import main.lesson_38_Exception.classwork.forum.model.Post;
+import main.lesson_38_Exception.classworkAndHomework.forum.dao.Forum;
+import main.lesson_38_Exception.classworkAndHomework.forum.dao.ForumImpl;
+import main.lesson_38_Exception.classworkAndHomework.forum.model.Post;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

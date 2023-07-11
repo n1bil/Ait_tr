@@ -1,6 +1,6 @@
-package main.lesson_38_Exception.classwork.forum.dao;
+package main.lesson_38_Exception.classworkAndHomework.forum.dao;
 
-import main.lesson_38_Exception.classwork.forum.model.Post;
+import main.lesson_38_Exception.classworkAndHomework.forum.model.Post;
 
 import java.time.LocalDate;
 import java.util.Arrays;

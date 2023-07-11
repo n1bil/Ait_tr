@@ -1,4 +1,4 @@
-package main.lesson_38_Exception.classwork.exception;
+package main.lesson_38_Exception.classworkAndHomework.exception;
 
 public class ExceptionAppl {
     public static void main(String[] args) {
