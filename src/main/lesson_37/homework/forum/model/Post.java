@@ -3,7 +3,7 @@ package main.lesson_37.homework.forum.model;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class Post {
+public class Post{
     private int postId;
     private String title;
     private String author;
@@ -11,11 +11,12 @@ public class Post {
     private LocalDateTime localDateTime;
     private int likes;
 
-    public Post(int postId, String title, String author, String content) {
+    public Post(int postId, String title, String author, String content, LocalDateTime localDateTime) {
         this.postId = postId;
         this.title = title;
         this.author = author;
         this.content = content;
+        this.localDateTime = localDateTime;
     }
 
     public int getPostId() {
@@ -74,4 +75,5 @@ public class Post {
     public int hashCode() {
         return Objects.hash(postId);
     }
+
 }
