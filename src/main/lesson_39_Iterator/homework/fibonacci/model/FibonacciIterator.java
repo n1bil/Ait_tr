@@ -5,7 +5,9 @@ import java.util.Iterator;
 public class FibonacciIterator implements Iterator<Integer> {
 
     private int length;
-    private int  currentPosition;
+    private int currentPosition;
+    private int number1 = 0;
+    private int number2 = 1;
 
     public FibonacciIterator(int length) {
         this.length = length;
@@ -20,6 +22,11 @@ public class FibonacciIterator implements Iterator<Integer> {
     @Override
     public Integer next() {
         //TODO
-        return currentPosition++;
+        int number3 = number1 + number2;
+        number1 = number2;
+        number2 = number3;
+        currentPosition++;
+        return number1;
+
     }
 }
