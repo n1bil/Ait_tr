@@ -36,8 +36,8 @@ public class ForumTest {
         assertThrows(RuntimeException.class, () -> forum.addPost(null));
         assertTrue(forum.addPost(posts[5]));
         assertEquals(6, forum.size());
-        assertThrows(RuntimeException.class, () -> forum.addPost(posts[5]));
-//        assertFalse(forum.addPost(posts[5]));
+//        assertThrows(RuntimeException.class, () -> forum.addPost(posts[5]));
+        assertFalse(forum.addPost(posts[5]));
         assertEquals(6, forum.size());
     }
     //        assertFalse(forum.addPost(posts[5]));
