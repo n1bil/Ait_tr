@@ -1,4 +1,4 @@
-package main.lesson_40_ArrayList.classworkHomework.list.interfaces;
+package main.lesson_42.classwork.list.interfaces;
 
 public interface IList<E> extends Iterable<E> {
 

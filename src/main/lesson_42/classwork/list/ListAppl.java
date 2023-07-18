@@ -1,7 +1,7 @@
-package main.lesson_40_ArrayList.classworkHomework.list;
+package main.lesson_42.classwork.list;
 
-import main.lesson_40_ArrayList.classworkHomework.list.interfaces.IList;
-import main.lesson_40_ArrayList.classworkHomework.list.model.MyArrayList;
+import main.lesson_42.classwork.list.interfaces.IList;
+import main.lesson_42.classwork.list.model.MyArrayList;
 
 public class ListAppl {
     public static void main(String[] args) {
