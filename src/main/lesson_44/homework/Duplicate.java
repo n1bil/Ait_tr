@@ -1,10 +1,6 @@
 package main.lesson_44.homework;
 
-import main.lesson_11.classwork.BinarySearch;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Random;
+import java.util.*;
 
 public class Duplicate {
     public static void main(String[] args) {
@@ -18,11 +14,17 @@ public class Duplicate {
 
         integers.add(randomPlace, randomNumber);
 
-        int index = findDuplicate(integers, randomNumber);
+        int index = findDuplicate(integers);
         System.out.println("Number " + index + " is a duplicate");
     }
 
-    private static int findDuplicate(ArrayList<Integer> integers, int randomNumber) {
-        return Collections.binarySearch(integers, randomNumber);
+    private static int findDuplicate(ArrayList<Integer> integers) {
+        Set<Integer> set = new HashSet<>();
+        for (Integer integer : integers) {
+            if (!set.add(integer)) {
+                return integer;
+            }
+        }
+        return -1;
     }
 }
