@@ -135,12 +135,13 @@ public class MyArrayList<E> implements IList<E> {
         return (E) elements[index];
     }
 
-    // 0(1)
+    // 0(n)
     @Override
     public E set(int index, E element) {
         checkIndex(index);
+        E oldValue = (E) elements[index];
         elements[index] = element;
-        return element;
+        return oldValue;
     }
 
     // 0(1)
