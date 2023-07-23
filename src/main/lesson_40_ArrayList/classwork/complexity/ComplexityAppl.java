@@ -1,4 +1,4 @@
-package main.lesson_40_ArrayList.classworkHomework.complexity;
+package main.lesson_40_ArrayList.classwork.complexity;
 
 import java.util.Arrays;
 
