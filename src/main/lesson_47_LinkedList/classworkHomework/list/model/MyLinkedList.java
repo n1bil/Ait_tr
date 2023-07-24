@@ -1,6 +1,6 @@
-package main.lesson_47_LinkedList.classwork.list.model;
+package main.lesson_47_LinkedList.classworkHomework.list.model;
 
-import main.lesson_47_LinkedList.classwork.list.interfaces.IList;
+import main.lesson_47_LinkedList.classworkHomework.list.interfaces.IList;
 
 import java.util.Iterator;
 

@@ -1,4 +1,4 @@
-package main.lesson_47_LinkedList.classwork.list.interfaces;
+package main.lesson_47_LinkedList.classworkHomework.list.interfaces;
 
 public interface IList<E> extends Iterable<E> {
 

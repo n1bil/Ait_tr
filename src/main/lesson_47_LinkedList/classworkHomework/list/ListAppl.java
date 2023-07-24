@@ -1,7 +1,7 @@
-package main.lesson_47_LinkedList.classwork.list;
+package main.lesson_47_LinkedList.classworkHomework.list;
 
-import main.lesson_47_LinkedList.classwork.list.interfaces.IList;
-import main.lesson_47_LinkedList.classwork.list.model.MyLinkedList;
+import main.lesson_47_LinkedList.classworkHomework.list.interfaces.IList;
+import main.lesson_47_LinkedList.classworkHomework.list.model.MyLinkedList;
 
 public class ListAppl {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package main.lesson_47_LinkedList.classwork.list.model;
+package main.lesson_47_LinkedList.classworkHomework.list.model;
 
 public class Node<E> {
 
