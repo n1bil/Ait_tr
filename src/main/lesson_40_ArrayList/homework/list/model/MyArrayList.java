@@ -63,6 +63,7 @@ public class MyArrayList<E> implements IList<E> {
     // метод add имеет 0(1) сложность, но из-за того что вызываем метод ensureCapacity(), тогда 0(n)
     @Override
     public boolean add(int index, E element) {
+        checkIndex(index); // add comment 24.07
         ensureCapacity();
         if (element != null && elements.length != size && index >= 0 && index <= size) {
             System.arraycopy(elements, index, elements, index + 1, size - index);
