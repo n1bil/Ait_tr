@@ -17,8 +17,7 @@ public class MyLinkedList<E> implements IList<E> {
 
     @Override
     public void clear() {
-        first = null;
-        last = null;
+        first = last = null;
         size = 0;
     }
 
@@ -102,30 +101,33 @@ public class MyLinkedList<E> implements IList<E> {
     @Override
     public E remove(int index) {
         //TODO
-        return null;
+        Node<E> node = getNodeByIndex(index);
+        return (E) node;
     }
 
     @Override
     public E set(int index, E element) {
-        checkIndex(index);
-        Node<E> node = getNodeByIndex(index);
-        E oldValue = node.data;
-        node.data = element;
-        return oldValue;
+        Node<E> node = getNodeByIndex(index);           // получить узел списка по указаному индексу
+        E oldValue = node.data;                         // сохранять текущее значение элемента этого узнала в переменную oldValue
+        node.data = element;                            // значение узла node.data заменяется на новое значение element
+        return oldValue;                                // возвращать старое значение
     }
 
     @Override
     public Iterator<E> iterator() {
         //TODO
         return new Iterator<E>() {
+            Node<E> node = first;
             @Override
             public boolean hasNext() {
-                return false;
+                return node != null;
             }
 
             @Override
             public E next() {
-                return null;
+                E data = node.data;
+                node = node.next;
+                return data;
             }
         };
     }
@@ -133,12 +135,12 @@ public class MyLinkedList<E> implements IList<E> {
     private Node<E> getNodeByIndex(int index) {
         checkIndex(index);
         Node<E> node;
-        if (index < size / 2) {
-            node = first;
+        if (index < size / 2) {                         // если индекс в начале
+            node = first;                               // перекладываем
             for (int i = 0; i < index; i++) {
                 node = node.next;
             }
-        } else {
+        } else {                                        // если индекс в конце
             node = last;
             for (int i = size - 1; i > index; i--) {
                 node = node.prev;
@@ -149,8 +151,21 @@ public class MyLinkedList<E> implements IList<E> {
 
     // 0(1)
     private void checkIndex(int index) {
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException(index);
+        if (index < 0 || index >= size) {               // если индекс меньше нуля или больше размера
+            throw new IndexOutOfBoundsException(index); // бросить ошибку
+        }
+    }
+
+    private static class Node<E> {
+
+        Node<E> prev;
+        E data;
+        Node<E> next;
+
+        public Node(Node<E> prev, E data, Node<E> next) {
+            this.prev = prev;
+            this.data = data;
+            this.next = next;
         }
     }
 }
