@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CitizensImpl implements Citizens {
 
@@ -45,7 +46,7 @@ public class CitizensImpl implements Citizens {
         if (index >= 0) {                                       // если больше и равен нулю, значит person уже с таким индексом существует
             return false;                                       // и возращаем false
         }                                                       // если всё таки вернул отрицательное, значит такого person нет и идём дальше
-        index = -index - 1;                                     //
+        index = -index - 1;
         idList.add(index, person);
         index = Collections.binarySearch(ageList, person, ageComparator);
         index = index >= 0 ? index : -index - 1;
@@ -123,13 +124,5 @@ public class CitizensImpl implements Citizens {
     @Override
     public int size() {
         return idList.size();
-    }
-
-    public int sizeLastName() {
-        return lastNameList.size();
-    }
-
-    public int sizeAge() {
-        return ageList.size();
     }
 }
