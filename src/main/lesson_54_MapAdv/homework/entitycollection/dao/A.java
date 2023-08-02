@@ -1,7 +1,7 @@
-package main.lesson_54_MapAdv.classwork.entitycollection.dao;
+package main.lesson_54_MapAdv.homework.entitycollection.dao;
 
-import main.lesson_54_MapAdv.classwork.entitycollection.interfaces.Entity;
-import main.lesson_54_MapAdv.classwork.entitycollection.interfaces.EntityCollection;
+import main.lesson_54_MapAdv.homework.entitycollection.interfaces.Entity;
+import main.lesson_54_MapAdv.homework.entitycollection.interfaces.EntityCollection;
 
 import java.util.HashSet;
 
