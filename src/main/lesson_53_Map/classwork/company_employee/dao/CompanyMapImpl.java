@@ -19,11 +19,11 @@ public class CompanyMapImpl implements Company {
     // 0(1)
     @Override
     public boolean addEmployee(Employee employee) {             // 0(1)
-        if (employee == null || employees.size() == capacity || employees.containsKey(employee.getId())) {
+        if (employee == null || employees.size() == capacity) {
             return false;
         }
         employees.put(employee.getId(), employee);  // 0(1)
-        return true;
+        return employees.putIfAbsent(employee.getId(), employee) == null;       // положить если отсутствует,
     }
 
     // 0(1)
