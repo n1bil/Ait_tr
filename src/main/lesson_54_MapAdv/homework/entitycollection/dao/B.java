@@ -24,36 +24,4 @@ public class B implements EntityCollection {
 
         return treeSet.pollFirst();
     }
-
 }
-/*
-
-    ArrayList<Entity> arrayList = new ArrayList<>();
-
-    @Override
-    public void add(Entity entity) {
-        if (entity != null) {
-            int insertIndex = Collections.binarySearch(arrayList, entity, (a, b) -> Integer.compare(b.getValue(), a.getValue()));
-        }
-    }
-
-    @Override
-    public Entity removeMaxValue() {
-        if (arrayList.isEmpty()) {
-            return null;
-        }
-
-        Entity maxEntity = arrayList.get(0);
-        int maxValue = maxEntity.getValue();
-
-        for (Entity entity : arrayList) {
-            if (entity.getValue() > maxValue) {
-                maxEntity = entity;
-                maxValue = entity.getValue();
-            }
-        }
-
-        arrayList.remove(maxEntity);
-        return maxEntity;
-    }
- */
