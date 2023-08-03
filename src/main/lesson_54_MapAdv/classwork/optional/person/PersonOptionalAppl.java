@@ -27,7 +27,8 @@ public class PersonOptionalAppl {
 
 //        Person person = optional.orElseGet(() -> new Person("Anonymous", -1));
 
-        Person person = optional.orElseThrow(() -> new PersonNotFoundException());
+//        Person person = optional.orElseThrow(() -> new PersonNotFoundException());
+        Person person = optional.orElseThrow(PersonNotFoundException::new);
 
         System.out.println(person.getName());
     }
