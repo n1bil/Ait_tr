@@ -27,7 +27,6 @@ public class Main {
         System.out.println("=================================");
 
         // print all the products with expired date
-        Iterable<Product> expiredProducts = supermarket.findProductsWithExpiredDate();
-        expiredProducts.forEach(System.out::println);
+        supermarket.findProductsWithExpiredDate().forEach(System.out::println);
     }
 }
