@@ -1,8 +1,6 @@
 package main.lesson_57_Collectors.homework;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -32,14 +30,17 @@ public class PomegranateAppl {
         System.out.println(maxSeedsInTheFirstBox);
 
         // task 4
-        List<Box> boxesWithMaxSeeds = boxes.stream()
-                .map(Box::getGranates)
-                .flatMap(Collection::stream)
-                .mapToInt(seeds -> seeds.getSeeds().size())
-                .max()
-                .orElse(0);                                 // couldn't complete the task
+        List<String> namesOfBoxesWithMaxSeeds = boxes.stream()
+                .filter(box -> box.getGranates().stream()
+                        .anyMatch(pomegranate -> pomegranate.getSeeds().size() == 700))
+                .map(Box::getName)
+                .collect(Collectors.toList());
+
+        namesOfBoxesWithMaxSeeds.forEach(System.out::println);
+
 
     }
+
 
     private static List<Box> generateRandomQuantityOfBoxes() {
         int randomQuantity = new Random().nextInt(200 - 100 + 1) + 100;
