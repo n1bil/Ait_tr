@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Main {
+public class PassengersOnTheTitanic {
     public static void main(String[] args) {
         try (BufferedReader bufferedReader = new BufferedReader(
                 new FileReader("src/main/lesson_59_CharOrientedStream/homework/file/train.csv"))) {
