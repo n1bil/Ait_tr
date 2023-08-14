@@ -11,10 +11,9 @@ import java.io.InputStreamReader;
 public class BotConfiguration {
     public static void talkToTheBot() {
         Restaurant restaurant = new RestaurantImpl();
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         while (true) {
-            try {
+            try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in))) {
                 Thread.sleep(3000);
                 System.out.println("\n" + restaurant.welcome());
                 System.out.println("If you want to reserve a table enter \"1\", if you want to leave press \"2\"");
