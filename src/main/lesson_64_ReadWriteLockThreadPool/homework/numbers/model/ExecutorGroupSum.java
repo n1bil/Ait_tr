@@ -1,6 +1,6 @@
 package main.lesson_64_ReadWriteLockThreadPool.homework.numbers.model;
 
-import ait.numbers.task.OneGroupSum;
+import main.lesson_64_ReadWriteLockThreadPool.homework.numbers.task.OneGroupSum;
 
 import java.util.Arrays;
 import java.util.concurrent.ExecutorService;

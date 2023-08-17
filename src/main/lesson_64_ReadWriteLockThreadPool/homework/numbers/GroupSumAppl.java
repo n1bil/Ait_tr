@@ -1,10 +1,10 @@
 package main.lesson_64_ReadWriteLockThreadPool.homework.numbers;
 
-import ait.numbers.model.ExecutorGroupSum;
-import ait.numbers.model.GroupSum;
-import ait.numbers.model.ParallelStreamGroupSum;
-import ait.numbers.model.ThreadGroupSum;
-import ait.numbers.test.GroupSumPerfomanceTest;
+import main.lesson_64_ReadWriteLockThreadPool.homework.numbers.model.ExecutorGroupSum;
+import main.lesson_64_ReadWriteLockThreadPool.homework.numbers.model.GroupSum;
+import main.lesson_64_ReadWriteLockThreadPool.homework.numbers.model.ParallelStreamGroupSum;
+import main.lesson_64_ReadWriteLockThreadPool.homework.numbers.model.ThreadGroupSum;
+import main.lesson_64_ReadWriteLockThreadPool.homework.numbers.test.GroupSumPerfomanceTest;
 
 import java.util.Random;
 

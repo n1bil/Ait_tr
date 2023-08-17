@@ -1,6 +1,6 @@
 package main.lesson_64_ReadWriteLockThreadPool.homework.numbers.test;
 
-import ait.numbers.model.GroupSum;
+import main.lesson_64_ReadWriteLockThreadPool.homework.numbers.model.GroupSum;
 
 public class GroupSumPerfomanceTest {
     String name;
